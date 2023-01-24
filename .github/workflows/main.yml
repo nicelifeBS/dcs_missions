@@ -29,3 +29,5 @@ jobs:
         uses: ncipollo/release-action@v1.12.0        
         with:
           artifacts: "tests/test.miz/test.miz"
+          removeArtifacts: "true"
+          allowUpdates: "true"
