@@ -20,7 +20,7 @@ jobs:
         uses: montudor/action-zip@v1.0.0
         with:
           # See montudor/action-zip README.md for more info
-          args: zip -qq -r test.miz tests/test.miz
+          args: cd tests/test.miz && zip -qq -r ../../test.miz .
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
