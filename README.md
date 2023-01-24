@@ -18,3 +18,4 @@ If you want to edit an existing mission:
 * if it doesn't load make sure you didn't pack the directory!
 
 To upload changes follow the same steps by unpacking the content into the repository and then do a new commit.
+t
