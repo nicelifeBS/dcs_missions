@@ -21,10 +21,10 @@ jobs:
       #     args: zip -qq -r test.miz .
       - name: zip release
         uses: thedoctor0/zip-release@0.7.0
-          with:
-            type: "zip"
-            filename: "test.miz"
-            directory: "tests/test.miz"
+        with:
+          type: "zip"
+          filename: "test.miz"
+          directory: "tests/test.miz"
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0        
         with:
