@@ -5,8 +5,8 @@ mission =
     }, -- end of ["requiredModules"]
     ["date"] = 
     {
-        ["Day"] = 21,
         ["Year"] = 2016,
+        ["Day"] = 21,
         ["Month"] = 6,
     }, -- end of ["date"]
     ["result"] = 
@@ -80,6 +80,94 @@ mission =
     ["pictureFileNameN"] = 
     {
     }, -- end of ["pictureFileNameN"]
+    ["drawings"] = 
+    {
+        ["options"] = 
+        {
+            ["hiddenOnF10Map"] = 
+            {
+                ["Observer"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["Observer"]
+                ["Instructor"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["Instructor"]
+                ["ForwardObserver"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["ForwardObserver"]
+                ["Spectrator"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["Spectrator"]
+                ["ArtilleryCommander"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["ArtilleryCommander"]
+                ["Pilot"] = 
+                {
+                    ["Neutral"] = false,
+                    ["Blue"] = false,
+                    ["Red"] = false,
+                }, -- end of ["Pilot"]
+            }, -- end of ["hiddenOnF10Map"]
+        }, -- end of ["options"]
+        ["layers"] = 
+        {
+            [1] = 
+            {
+                ["visible"] = true,
+                ["name"] = "Red",
+                ["objects"] = 
+                {
+                }, -- end of ["objects"]
+            }, -- end of [1]
+            [2] = 
+            {
+                ["visible"] = true,
+                ["name"] = "Blue",
+                ["objects"] = 
+                {
+                }, -- end of ["objects"]
+            }, -- end of [2]
+            [3] = 
+            {
+                ["visible"] = true,
+                ["name"] = "Neutral",
+                ["objects"] = 
+                {
+                }, -- end of ["objects"]
+            }, -- end of [3]
+            [4] = 
+            {
+                ["visible"] = true,
+                ["name"] = "Common",
+                ["objects"] = 
+                {
+                }, -- end of ["objects"]
+            }, -- end of [4]
+            [5] = 
+            {
+                ["visible"] = true,
+                ["name"] = "Author",
+                ["objects"] = 
+                {
+                }, -- end of ["objects"]
+            }, -- end of [5]
+        }, -- end of ["layers"]
+    }, -- end of ["drawings"]
     ["groundControl"] = 
     {
         ["passwords"] = 
@@ -137,24 +225,31 @@ mission =
                 ["speed"] = 0,
                 ["dir"] = 0,
             }, -- end of ["at8000"]
-            ["at2000"] = 
-            {
-                ["speed"] = 0,
-                ["dir"] = 0,
-            }, -- end of ["at2000"]
             ["atGround"] = 
             {
                 ["speed"] = 0,
                 ["dir"] = 0,
             }, -- end of ["atGround"]
+            ["at2000"] = 
+            {
+                ["speed"] = 0,
+                ["dir"] = 0,
+            }, -- end of ["at2000"]
         }, -- end of ["wind"]
         ["enable_fog"] = false,
-        ["dust_density"] = 0,
+        ["fog"] = 
+        {
+            ["thickness"] = 0,
+            ["visibility"] = 0,
+        }, -- end of ["fog"]
         ["halo"] = 
         {
             ["preset"] = "auto",
         }, -- end of ["halo"]
-        ["enable_dust"] = false,
+        ["visibility"] = 
+        {
+            ["distance"] = 80000,
+        }, -- end of ["visibility"]
         ["season"] = 
         {
             ["temperature"] = 20,
@@ -165,17 +260,10 @@ mission =
         {
         }, -- end of ["cyclones"]
         ["name"] = "Winter, clean sky",
-        ["fog"] = 
-        {
-            ["thickness"] = 0,
-            ["visibility"] = 0,
-        }, -- end of ["fog"]
-        ["groundTurbulence"] = 0,
+        ["dust_density"] = 0,
         ["modifiedTime"] = false,
-        ["visibility"] = 
-        {
-            ["distance"] = 80000,
-        }, -- end of ["visibility"]
+        ["groundTurbulence"] = 0,
+        ["enable_dust"] = false,
         ["clouds"] = 
         {
             ["density"] = 0,
@@ -194,12 +282,16 @@ mission =
     }, -- end of ["triggers"]
     ["map"] = 
     {
-        ["centerY"] = 516865.15290971,
-        ["zoom"] = 25489.631841855,
-        ["centerX"] = -197742.44743486,
+        ["centerY"] = 525156.00456769,
+        ["zoom"] = 168412.40331957,
+        ["centerX"] = -187555.68544953,
     }, -- end of ["map"]
     ["coalitions"] = 
     {
+        ["blue"] = 
+        {
+            [1] = 2,
+        }, -- end of ["blue"]
         ["neutrals"] = 
         {
             [1] = 18,
@@ -291,10 +383,6 @@ mission =
             [87] = 48,
             [88] = 67,
         }, -- end of ["neutrals"]
-        ["blue"] = 
-        {
-            [1] = 2,
-        }, -- end of ["blue"]
         ["red"] = 
         {
             [1] = 36,
@@ -314,21 +402,6 @@ mission =
     }, -- end of ["pictureFileNameB"]
     ["coalition"] = 
     {
-        ["neutrals"] = 
-        {
-            ["bullseye"] = 
-            {
-                ["y"] = 0,
-                ["x"] = 0,
-            }, -- end of ["bullseye"]
-            ["nav_points"] = 
-            {
-            }, -- end of ["nav_points"]
-            ["name"] = "neutrals",
-            ["country"] = 
-            {
-            }, -- end of ["country"]
-        }, -- end of ["neutrals"]
         ["blue"] = 
         {
             ["bullseye"] = 
@@ -365,8 +438,8 @@ mission =
                                     {
                                         [1] = 
                                         {
-                                            ["alt"] = 2000,
-                                            ["action"] = "From Ground Area Hot",
+                                            ["alt"] = 21,
+                                            ["action"] = "From Parking Area Hot",
                                             ["alt_type"] = "BARO",
                                             ["properties"] = 
                                             {
@@ -376,7 +449,7 @@ mission =
                                                 ["angle"] = 0,
                                                 ["steer"] = 2,
                                             }, -- end of ["properties"]
-                                            ["speed"] = 123.33333333333,
+                                            ["speed"] = 138.88888888889,
                                             ["task"] = 
                                             {
                                                 ["id"] = "ComboTask",
@@ -386,10 +459,10 @@ mission =
                                                     {
                                                         [1] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 1,
                                                             ["key"] = "CAS",
                                                             ["id"] = "EngageTargets",
-                                                            ["number"] = 1,
+                                                            ["enabled"] = true,
                                                             ["auto"] = true,
                                                             ["params"] = 
                                                             {
@@ -404,10 +477,10 @@ mission =
                                                         }, -- end of [1]
                                                         [2] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 2,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 2,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -423,10 +496,10 @@ mission =
                                                         }, -- end of [2]
                                                         [3] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 3,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 3,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -442,10 +515,10 @@ mission =
                                                         }, -- end of [3]
                                                         [4] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 4,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 4,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -463,10 +536,10 @@ mission =
                                                         }, -- end of [4]
                                                         [5] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 5,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 5,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -482,10 +555,10 @@ mission =
                                                         }, -- end of [5]
                                                         [6] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 6,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 6,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -536,10 +609,10 @@ mission =
                                                         }, -- end of [6]
                                                         [7] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 7,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 7,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -555,10 +628,10 @@ mission =
                                                         }, -- end of [7]
                                                         [8] = 
                                                         {
-                                                            ["enabled"] = true,
+                                                            ["number"] = 8,
                                                             ["auto"] = true,
                                                             ["id"] = "WrappedAction",
-                                                            ["number"] = 8,
+                                                            ["enabled"] = true,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -575,46 +648,15 @@ mission =
                                                     }, -- end of ["tasks"]
                                                 }, -- end of ["params"]
                                             }, -- end of ["task"]
-                                            ["type"] = "TakeOffGroundHot",
+                                            ["type"] = "TakeOffParkingHot",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
-                                            ["y"] = 517037.17862207,
-                                            ["x"] = -197768.44125154,
+                                            ["y"] = 516728.77239072,
+                                            ["x"] = -197889.87820096,
                                             ["formation_template"] = "",
+                                            ["airdromeId"] = 21,
                                             ["speed_locked"] = true,
                                         }, -- end of [1]
-                                        [2] = 
-                                        {
-                                            ["alt"] = 2000,
-                                            ["action"] = "Fly Over Point",
-                                            ["alt_type"] = "BARO",
-                                            ["properties"] = 
-                                            {
-                                                ["vnav"] = 1,
-                                                ["scale"] = 0,
-                                                ["vangle"] = 0,
-                                                ["angle"] = 0,
-                                                ["steer"] = 2,
-                                            }, -- end of ["properties"]
-                                            ["speed"] = 123.33333333333,
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                    }, -- end of ["tasks"]
-                                                }, -- end of ["params"]
-                                            }, -- end of ["task"]
-                                            ["type"] = "Turning Point",
-                                            ["ETA"] = 507.70032627917,
-                                            ["ETA_locked"] = false,
-                                            ["y"] = 464766.96100261,
-                                            ["x"] = -163296.72029155,
-                                            ["formation_template"] = "",
-                                            ["speed_locked"] = true,
-                                        }, -- end of [2]
                                     }, -- end of ["points"]
                                 }, -- end of ["route"]
                                 ["groupId"] = 1,
@@ -623,20 +665,21 @@ mission =
                                 {
                                     [1] = 
                                     {
-                                        ["alt"] = 2000,
+                                        ["alt"] = 21,
                                         ["hardpoint_racks"] = true,
                                         ["alt_type"] = "BARO",
                                         ["livery_id"] = "25th fs osan ab, korea (os)",
                                         ["skill"] = "Client",
-                                        ["speed"] = 123.33333333333,
+                                        ["parking"] = "29",
+                                        ["speed"] = 138.88888888889,
                                         ["AddPropAircraft"] = 
                                         {
                                         }, -- end of ["AddPropAircraft"]
                                         ["type"] = "A-10C_2",
                                         ["unitId"] = 1,
                                         ["psi"] = -5.7421332390613,
-                                        ["y"] = 517037.17862207,
-                                        ["x"] = -197768.44125154,
+                                        ["parking_id"] = "01",
+                                        ["x"] = -197889.87820096,
                                         ["name"] = "Buster-1-1",
                                         ["payload"] = 
                                         {
@@ -669,7 +712,8 @@ mission =
                                             ["chaff"] = 240,
                                             ["gun"] = 100,
                                         }, -- end of ["payload"]
-                                        ["heading"] = 5.7421332390613,
+                                        ["y"] = 516728.77239072,
+                                        ["heading"] = 0,
                                         ["callsign"] = 
                                         {
                                             [1] = 1,
@@ -679,9 +723,68 @@ mission =
                                         }, -- end of ["callsign"]
                                         ["onboard_num"] = "010",
                                     }, -- end of [1]
+                                    [2] = 
+                                    {
+                                        ["alt"] = 21,
+                                        ["alt_type"] = "BARO",
+                                        ["livery_id"] = "25th fs osan ab, korea (os)",
+                                        ["skill"] = "Client",
+                                        ["parking"] = "28",
+                                        ["speed"] = 138.88888888889,
+                                        ["AddPropAircraft"] = 
+                                        {
+                                        }, -- end of ["AddPropAircraft"]
+                                        ["type"] = "A-10C_2",
+                                        ["unitId"] = 29,
+                                        ["psi"] = 0,
+                                        ["parking_id"] = "02",
+                                        ["x"] = -197864.01882596,
+                                        ["name"] = "Buster-1-2",
+                                        ["payload"] = 
+                                        {
+                                            ["pylons"] = 
+                                            {
+                                                [1] = 
+                                                {
+                                                    ["CLSID"] = "{A4BCC903-06C8-47bb-9937-A30FEDB4E743}",
+                                                }, -- end of [1]
+                                                [11] = 
+                                                {
+                                                    ["CLSID"] = "{DB434044-F5D0-4F1F-9BA9-B73027E18DD3}",
+                                                }, -- end of [11]
+                                                [10] = 
+                                                {
+                                                    ["CLSID"] = "{A111396E-D3E8-4b9c-8AC9-2432489304D5}",
+                                                }, -- end of [10]
+                                                [9] = 
+                                                {
+                                                    ["CLSID"] = "{E6A6262A-CA08-4B3D-B030-E1A993B98453}",
+                                                }, -- end of [9]
+                                                [3] = 
+                                                {
+                                                    ["CLSID"] = "{E6A6262A-CA08-4B3D-B030-E1A993B98452}",
+                                                }, -- end of [3]
+                                            }, -- end of ["pylons"]
+                                            ["fuel"] = 5029,
+                                            ["flare"] = 240,
+                                            ["ammo_type"] = 1,
+                                            ["chaff"] = 240,
+                                            ["gun"] = 100,
+                                        }, -- end of ["payload"]
+                                        ["y"] = 516674.61614072,
+                                        ["heading"] = 0,
+                                        ["callsign"] = 
+                                        {
+                                            [1] = 1,
+                                            [2] = 1,
+                                            [3] = 2,
+                                            ["name"] = "Enfield12",
+                                        }, -- end of ["callsign"]
+                                        ["onboard_num"] = "015",
+                                    }, -- end of [2]
                                 }, -- end of ["units"]
-                                ["y"] = 517037.17862207,
-                                ["x"] = -197768.44125154,
+                                ["y"] = 516728.77239072,
+                                ["x"] = -197889.87820096,
                                 ["name"] = "Buster-1",
                                 ["communication"] = true,
                                 ["start_time"] = 0,
@@ -694,10 +797,811 @@ mission =
                                 ["tasks"] = 
                                 {
                                 }, -- end of ["tasks"]
-                                ["uncontrollable"] = false,
+                                ["radioSet"] = false,
                                 ["task"] = "SEAD",
                                 ["uncontrolled"] = false,
                                 ["hiddenOnMFD"] = false,
+                                ["taskSelected"] = true,
+                                ["route"] = 
+                                {
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 21,
+                                            ["action"] = "From Parking Area Hot",
+                                            ["alt_type"] = "BARO",
+                                            ["speed"] = 138.88888888889,
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                        [1] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = true,
+                                                            ["id"] = "EngageTargets",
+                                                            ["number"] = 1,
+                                                            ["key"] = "SEAD",
+                                                            ["params"] = 
+                                                            {
+                                                                ["targetTypes"] = 
+                                                                {
+                                                                    [1] = "Air Defence",
+                                                                }, -- end of ["targetTypes"]
+                                                                ["priority"] = 0,
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [1]
+                                                        [2] = 
+                                                        {
+                                                            ["number"] = 2,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["enabled"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = 2,
+                                                                        ["name"] = 1,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [2]
+                                                        [3] = 
+                                                        {
+                                                            ["number"] = 3,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["enabled"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = 2,
+                                                                        ["name"] = 13,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [3]
+                                                        [4] = 
+                                                        {
+                                                            ["number"] = 4,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["enabled"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = true,
+                                                                        ["name"] = 19,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [4]
+                                                        [5] = 
+                                                        {
+                                                            ["number"] = 5,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["enabled"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["targetTypes"] = 
+                                                                        {
+                                                                            [1] = "Air Defence",
+                                                                        }, -- end of ["targetTypes"]
+                                                                        ["name"] = 21,
+                                                                        ["value"] = "Air Defence;",
+                                                                        ["noTargetTypes"] = 
+                                                                        {
+                                                                            [1] = "Fighters",
+                                                                            [2] = "Multirole fighters",
+                                                                            [3] = "Bombers",
+                                                                            [4] = "Helicopters",
+                                                                            [5] = "UAVs",
+                                                                            [6] = "Infantry",
+                                                                            [7] = "Fortifications",
+                                                                            [8] = "Tanks",
+                                                                            [9] = "IFV",
+                                                                            [10] = "APC",
+                                                                            [11] = "Artillery",
+                                                                            [12] = "Unarmed vehicles",
+                                                                            [13] = "Aircraft Carriers",
+                                                                            [14] = "Cruisers",
+                                                                            [15] = "Destroyers",
+                                                                            [16] = "Frigates",
+                                                                            [17] = "Corvettes",
+                                                                            [18] = "Light armed ships",
+                                                                            [19] = "Unarmed ships",
+                                                                            [20] = "Submarines",
+                                                                            [21] = "Cruise missiles",
+                                                                            [22] = "Antiship Missiles",
+                                                                            [23] = "AA Missiles",
+                                                                            [24] = "AG Missiles",
+                                                                            [25] = "SA Missiles",
+                                                                        }, -- end of ["noTargetTypes"]
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [5]
+                                                        [6] = 
+                                                        {
+                                                            ["number"] = 6,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["enabled"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "EPLRS",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = true,
+                                                                        ["groupId"] = 2,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [6]
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["type"] = "TakeOffParkingHot",
+                                            ["ETA"] = 0,
+                                            ["ETA_locked"] = true,
+                                            ["y"] = 516620.27239072,
+                                            ["x"] = -197838.50320096,
+                                            ["formation_template"] = "",
+                                            ["airdromeId"] = 21,
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 5,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["alt"] = 21,
+                                        ["alt_type"] = "BARO",
+                                        ["livery_id"] = "default",
+                                        ["skill"] = "Client",
+                                        ["parking"] = 27,
+                                        ["speed"] = 138.88888888889,
+                                        ["AddPropAircraft"] = 
+                                        {
+                                            ["LaserCode100"] = 6,
+                                            ["HelmetMountedDevice"] = 1,
+                                            ["LaserCode1"] = 8,
+                                            ["LaserCode10"] = 8,
+                                            ["LAU3ROF"] = 0,
+                                        }, -- end of ["AddPropAircraft"]
+                                        ["type"] = "F-16C_50",
+                                        ["Radio"] = 
+                                        {
+                                            [1] = 
+                                            {
+                                                ["modulations"] = 
+                                                {
+                                                    [1] = 0,
+                                                    [2] = 0,
+                                                    [4] = 0,
+                                                    [8] = 0,
+                                                    [16] = 0,
+                                                    [17] = 0,
+                                                    [9] = 0,
+                                                    [18] = 0,
+                                                    [5] = 0,
+                                                    [10] = 0,
+                                                    [20] = 0,
+                                                    [11] = 0,
+                                                    [3] = 0,
+                                                    [6] = 0,
+                                                    [12] = 0,
+                                                    [13] = 0,
+                                                    [7] = 0,
+                                                    [14] = 0,
+                                                    [19] = 0,
+                                                    [15] = 0,
+                                                }, -- end of ["modulations"]
+                                                ["channels"] = 
+                                                {
+                                                    [1] = 305,
+                                                    [2] = 264,
+                                                    [4] = 256,
+                                                    [8] = 257,
+                                                    [16] = 261,
+                                                    [17] = 267,
+                                                    [9] = 255,
+                                                    [18] = 251,
+                                                    [5] = 254,
+                                                    [10] = 262,
+                                                    [20] = 266,
+                                                    [11] = 259,
+                                                    [3] = 265,
+                                                    [6] = 250,
+                                                    [12] = 268,
+                                                    [13] = 269,
+                                                    [7] = 270,
+                                                    [14] = 260,
+                                                    [19] = 253,
+                                                    [15] = 263,
+                                                }, -- end of ["channels"]
+                                            }, -- end of [1]
+                                            [2] = 
+                                            {
+                                                ["modulations"] = 
+                                                {
+                                                    [1] = 0,
+                                                    [2] = 0,
+                                                    [4] = 0,
+                                                    [8] = 0,
+                                                    [16] = 0,
+                                                    [17] = 0,
+                                                    [9] = 0,
+                                                    [18] = 0,
+                                                    [5] = 0,
+                                                    [10] = 0,
+                                                    [20] = 0,
+                                                    [11] = 0,
+                                                    [3] = 0,
+                                                    [6] = 0,
+                                                    [12] = 0,
+                                                    [13] = 0,
+                                                    [7] = 0,
+                                                    [14] = 0,
+                                                    [19] = 0,
+                                                    [15] = 0,
+                                                }, -- end of ["modulations"]
+                                                ["channels"] = 
+                                                {
+                                                    [1] = 127,
+                                                    [2] = 135,
+                                                    [4] = 127,
+                                                    [8] = 128,
+                                                    [16] = 132,
+                                                    [17] = 138,
+                                                    [9] = 126,
+                                                    [18] = 122,
+                                                    [5] = 125,
+                                                    [10] = 133,
+                                                    [20] = 137,
+                                                    [11] = 130,
+                                                    [3] = 136,
+                                                    [6] = 121,
+                                                    [12] = 139,
+                                                    [13] = 140,
+                                                    [7] = 141,
+                                                    [14] = 131,
+                                                    [19] = 124,
+                                                    [15] = 134,
+                                                }, -- end of ["channels"]
+                                            }, -- end of [2]
+                                        }, -- end of ["Radio"]
+                                        ["unitId"] = 25,
+                                        ["psi"] = 0,
+                                        ["parking_id"] = "03",
+                                        ["x"] = -197838.50320096,
+                                        ["name"] = "Fire-1-1",
+                                        ["payload"] = 
+                                        {
+                                            ["pylons"] = 
+                                            {
+                                            }, -- end of ["pylons"]
+                                            ["fuel"] = 3249,
+                                            ["flare"] = 60,
+                                            ["ammo_type"] = 5,
+                                            ["chaff"] = 60,
+                                            ["gun"] = 100,
+                                        }, -- end of ["payload"]
+                                        ["y"] = 516620.27239072,
+                                        ["heading"] = 0,
+                                        ["callsign"] = 
+                                        {
+                                            [1] = 4,
+                                            [2] = 1,
+                                            [3] = 1,
+                                            ["name"] = "Colt11",
+                                        }, -- end of ["callsign"]
+                                        ["onboard_num"] = "011",
+                                    }, -- end of [1]
+                                    [2] = 
+                                    {
+                                        ["alt"] = 21,
+                                        ["alt_type"] = "BARO",
+                                        ["livery_id"] = "default",
+                                        ["skill"] = "Client",
+                                        ["parking"] = 26,
+                                        ["speed"] = 138.88888888889,
+                                        ["AddPropAircraft"] = 
+                                        {
+                                            ["LaserCode100"] = 6,
+                                            ["LaserCode1"] = 8,
+                                            ["LaserCode10"] = 8,
+                                            ["LAU3ROF"] = 0,
+                                            ["HelmetMountedDevice"] = 1,
+                                        }, -- end of ["AddPropAircraft"]
+                                        ["type"] = "F-16C_50",
+                                        ["Radio"] = 
+                                        {
+                                            [1] = 
+                                            {
+                                                ["modulations"] = 
+                                                {
+                                                    [1] = 0,
+                                                    [2] = 0,
+                                                    [4] = 0,
+                                                    [8] = 0,
+                                                    [16] = 0,
+                                                    [17] = 0,
+                                                    [9] = 0,
+                                                    [18] = 0,
+                                                    [5] = 0,
+                                                    [10] = 0,
+                                                    [20] = 0,
+                                                    [11] = 0,
+                                                    [3] = 0,
+                                                    [6] = 0,
+                                                    [12] = 0,
+                                                    [13] = 0,
+                                                    [7] = 0,
+                                                    [14] = 0,
+                                                    [19] = 0,
+                                                    [15] = 0,
+                                                }, -- end of ["modulations"]
+                                                ["channels"] = 
+                                                {
+                                                    [1] = 305,
+                                                    [2] = 264,
+                                                    [4] = 256,
+                                                    [8] = 257,
+                                                    [16] = 261,
+                                                    [17] = 267,
+                                                    [9] = 255,
+                                                    [18] = 251,
+                                                    [5] = 254,
+                                                    [10] = 262,
+                                                    [20] = 266,
+                                                    [11] = 259,
+                                                    [3] = 265,
+                                                    [6] = 250,
+                                                    [12] = 268,
+                                                    [13] = 269,
+                                                    [7] = 270,
+                                                    [14] = 260,
+                                                    [19] = 253,
+                                                    [15] = 263,
+                                                }, -- end of ["channels"]
+                                            }, -- end of [1]
+                                            [2] = 
+                                            {
+                                                ["modulations"] = 
+                                                {
+                                                    [1] = 0,
+                                                    [2] = 0,
+                                                    [4] = 0,
+                                                    [8] = 0,
+                                                    [16] = 0,
+                                                    [17] = 0,
+                                                    [9] = 0,
+                                                    [18] = 0,
+                                                    [5] = 0,
+                                                    [10] = 0,
+                                                    [20] = 0,
+                                                    [11] = 0,
+                                                    [3] = 0,
+                                                    [6] = 0,
+                                                    [12] = 0,
+                                                    [13] = 0,
+                                                    [7] = 0,
+                                                    [14] = 0,
+                                                    [19] = 0,
+                                                    [15] = 0,
+                                                }, -- end of ["modulations"]
+                                                ["channels"] = 
+                                                {
+                                                    [1] = 127,
+                                                    [2] = 135,
+                                                    [4] = 127,
+                                                    [8] = 128,
+                                                    [16] = 132,
+                                                    [17] = 138,
+                                                    [9] = 126,
+                                                    [18] = 122,
+                                                    [5] = 125,
+                                                    [10] = 133,
+                                                    [20] = 137,
+                                                    [11] = 130,
+                                                    [3] = 136,
+                                                    [6] = 121,
+                                                    [12] = 139,
+                                                    [13] = 140,
+                                                    [7] = 141,
+                                                    [14] = 131,
+                                                    [19] = 124,
+                                                    [15] = 134,
+                                                }, -- end of ["channels"]
+                                            }, -- end of [2]
+                                        }, -- end of ["Radio"]
+                                        ["unitId"] = 26,
+                                        ["psi"] = 0,
+                                        ["parking_id"] = "04",
+                                        ["x"] = -197812.95632596,
+                                        ["name"] = "Fire-1-2",
+                                        ["payload"] = 
+                                        {
+                                            ["pylons"] = 
+                                            {
+                                            }, -- end of ["pylons"]
+                                            ["fuel"] = 3249,
+                                            ["flare"] = 60,
+                                            ["ammo_type"] = 5,
+                                            ["chaff"] = 60,
+                                            ["gun"] = 100,
+                                        }, -- end of ["payload"]
+                                        ["y"] = 516565.99114072,
+                                        ["heading"] = 0,
+                                        ["callsign"] = 
+                                        {
+                                            [1] = 4,
+                                            [2] = 1,
+                                            [3] = 2,
+                                            ["name"] = "Colt12",
+                                        }, -- end of ["callsign"]
+                                        ["onboard_num"] = "012",
+                                    }, -- end of [2]
+                                }, -- end of ["units"]
+                                ["y"] = 516620.27239072,
+                                ["x"] = -197838.50320096,
+                                ["name"] = "Fire-1",
+                                ["communication"] = true,
+                                ["start_time"] = 0,
+                                ["uncontrollable"] = false,
+                                ["frequency"] = 305,
+                            }, -- end of [2]
+                            [3] = 
+                            {
+                                ["modulation"] = 0,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["radioSet"] = false,
+                                ["task"] = "CAP",
+                                ["uncontrolled"] = false,
+                                ["route"] = 
+                                {
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["alt"] = 21,
+                                            ["action"] = "From Parking Area Hot",
+                                            ["alt_type"] = "BARO",
+                                            ["speed"] = 138.88888888889,
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                        [1] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["key"] = "CAP",
+                                                            ["id"] = "EngageTargets",
+                                                            ["number"] = 1,
+                                                            ["auto"] = true,
+                                                            ["params"] = 
+                                                            {
+                                                                ["targetTypes"] = 
+                                                                {
+                                                                    [1] = "Air",
+                                                                }, -- end of ["targetTypes"]
+                                                                ["priority"] = 0,
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [1]
+                                                        [2] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 2,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = true,
+                                                                        ["name"] = 17,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [2]
+                                                        [3] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 3,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = 4,
+                                                                        ["name"] = 18,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [3]
+                                                        [4] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 4,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = true,
+                                                                        ["name"] = 19,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [4]
+                                                        [5] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 5,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["targetTypes"] = 
+                                                                        {
+                                                                        }, -- end of ["targetTypes"]
+                                                                        ["name"] = 21,
+                                                                        ["value"] = "none;",
+                                                                        ["noTargetTypes"] = 
+                                                                        {
+                                                                            [1] = "Fighters",
+                                                                            [2] = "Multirole fighters",
+                                                                            [3] = "Bombers",
+                                                                            [4] = "Helicopters",
+                                                                            [5] = "UAVs",
+                                                                            [6] = "Infantry",
+                                                                            [7] = "Fortifications",
+                                                                            [8] = "Tanks",
+                                                                            [9] = "IFV",
+                                                                            [10] = "APC",
+                                                                            [11] = "Artillery",
+                                                                            [12] = "Unarmed vehicles",
+                                                                            [13] = "AAA",
+                                                                            [14] = "SR SAM",
+                                                                            [15] = "MR SAM",
+                                                                            [16] = "LR SAM",
+                                                                            [17] = "Aircraft Carriers",
+                                                                            [18] = "Cruisers",
+                                                                            [19] = "Destroyers",
+                                                                            [20] = "Frigates",
+                                                                            [21] = "Corvettes",
+                                                                            [22] = "Light armed ships",
+                                                                            [23] = "Unarmed ships",
+                                                                            [24] = "Submarines",
+                                                                            [25] = "Cruise missiles",
+                                                                            [26] = "Antiship Missiles",
+                                                                            [27] = "AA Missiles",
+                                                                            [28] = "AG Missiles",
+                                                                            [29] = "SA Missiles",
+                                                                        }, -- end of ["noTargetTypes"]
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [5]
+                                                        [6] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 6,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "EPLRS",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["value"] = true,
+                                                                        ["groupId"] = 3,
+                                                                    }, -- end of ["params"]
+                                                                }, -- end of ["action"]
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [6]
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["type"] = "TakeOffParkingHot",
+                                            ["ETA"] = 0,
+                                            ["ETA_locked"] = true,
+                                            ["y"] = 516511.80364072,
+                                            ["x"] = -197787.23757596,
+                                            ["formation_template"] = "",
+                                            ["airdromeId"] = 21,
+                                            ["speed_locked"] = true,
+                                        }, -- end of [1]
+                                    }, -- end of ["points"]
+                                }, -- end of ["route"]
+                                ["groupId"] = 6,
+                                ["hidden"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["alt"] = 21,
+                                        ["alt_type"] = "BARO",
+                                        ["livery_id"] = "12th Fighter SQN (AK)",
+                                        ["skill"] = "Client",
+                                        ["parking"] = 25,
+                                        ["speed"] = 138.88888888889,
+                                        ["type"] = "F-15C",
+                                        ["unitId"] = 27,
+                                        ["psi"] = 0,
+                                        ["parking_id"] = "05",
+                                        ["x"] = -197787.23757596,
+                                        ["name"] = "Aerial-1-1",
+                                        ["payload"] = 
+                                        {
+                                            ["pylons"] = 
+                                            {
+                                            }, -- end of ["pylons"]
+                                            ["fuel"] = "6103",
+                                            ["flare"] = 60,
+                                            ["chaff"] = 120,
+                                            ["gun"] = 100,
+                                        }, -- end of ["payload"]
+                                        ["y"] = 516511.80364072,
+                                        ["heading"] = 0,
+                                        ["callsign"] = 
+                                        {
+                                            [1] = 4,
+                                            [2] = 1,
+                                            [3] = 1,
+                                            ["name"] = "Colt11",
+                                        }, -- end of ["callsign"]
+                                        ["onboard_num"] = "013",
+                                    }, -- end of [1]
+                                    [2] = 
+                                    {
+                                        ["alt"] = 21,
+                                        ["hardpoint_racks"] = true,
+                                        ["alt_type"] = "BARO",
+                                        ["livery_id"] = "493rd Fighter SQN (LN)",
+                                        ["skill"] = "Client",
+                                        ["parking"] = 24,
+                                        ["speed"] = 138.88888888889,
+                                        ["type"] = "F-15C",
+                                        ["unitId"] = 28,
+                                        ["psi"] = 0,
+                                        ["parking_id"] = "06",
+                                        ["x"] = -197762.09695096,
+                                        ["name"] = "Aerial-1-2",
+                                        ["payload"] = 
+                                        {
+                                            ["pylons"] = 
+                                            {
+                                                [1] = 
+                                                {
+                                                    ["CLSID"] = "{AIM-9L}",
+                                                }, -- end of [1]
+                                                [2] = 
+                                                {
+                                                    ["CLSID"] = "{E1F29B21-F291-4589-9FD8-3272EEC69506}",
+                                                }, -- end of [2]
+                                                [3] = 
+                                                {
+                                                    ["CLSID"] = "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}",
+                                                }, -- end of [3]
+                                                [4] = 
+                                                {
+                                                    ["CLSID"] = "{C8E06185-7CD6-4C90-959F-044679E90751}",
+                                                }, -- end of [4]
+                                                [5] = 
+                                                {
+                                                    ["CLSID"] = "{C8E06185-7CD6-4C90-959F-044679E90751}",
+                                                }, -- end of [5]
+                                                [6] = 
+                                                {
+                                                    ["CLSID"] = "{E1F29B21-F291-4589-9FD8-3272EEC69506}",
+                                                }, -- end of [6]
+                                                [7] = 
+                                                {
+                                                    ["CLSID"] = "{C8E06185-7CD6-4C90-959F-044679E90751}",
+                                                }, -- end of [7]
+                                                [8] = 
+                                                {
+                                                    ["CLSID"] = "{C8E06185-7CD6-4C90-959F-044679E90751}",
+                                                }, -- end of [8]
+                                                [9] = 
+                                                {
+                                                    ["CLSID"] = "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}",
+                                                }, -- end of [9]
+                                                [10] = 
+                                                {
+                                                    ["CLSID"] = "{E1F29B21-F291-4589-9FD8-3272EEC69506}",
+                                                }, -- end of [10]
+                                                [11] = 
+                                                {
+                                                    ["CLSID"] = "{AIM-9L}",
+                                                }, -- end of [11]
+                                            }, -- end of ["pylons"]
+                                            ["fuel"] = "6103",
+                                            ["flare"] = 60,
+                                            ["chaff"] = 120,
+                                            ["gun"] = 100,
+                                        }, -- end of ["payload"]
+                                        ["y"] = 516457.36614072,
+                                        ["heading"] = 0,
+                                        ["callsign"] = 
+                                        {
+                                            [1] = 4,
+                                            [2] = 1,
+                                            [3] = 2,
+                                            ["name"] = "Colt12",
+                                        }, -- end of ["callsign"]
+                                        ["onboard_num"] = "014",
+                                    }, -- end of [2]
+                                }, -- end of ["units"]
+                                ["y"] = 516511.80364072,
+                                ["x"] = -197787.23757596,
+                                ["name"] = "Aerial-1",
+                                ["communication"] = true,
+                                ["start_time"] = 0,
+                                ["uncontrollable"] = false,
+                                ["frequency"] = 124,
+                            }, -- end of [3]
+                            [4] = 
+                            {
+                                ["modulation"] = 0,
+                                ["tasks"] = 
+                                {
+                                }, -- end of ["tasks"]
+                                ["radioSet"] = true,
+                                ["task"] = "SEAD",
+                                ["uncontrolled"] = false,
                                 ["taskSelected"] = true,
                                 ["route"] = 
                                 {
@@ -854,7 +1758,7 @@ mission =
                                                                     ["params"] = 
                                                                     {
                                                                         ["value"] = true,
-                                                                        ["groupId"] = 2,
+                                                                        ["groupId"] = 4,
                                                                     }, -- end of ["params"]
                                                                 }, -- end of ["action"]
                                                             }, -- end of ["params"]
@@ -865,145 +1769,154 @@ mission =
                                             ["type"] = "TakeOffParkingHot",
                                             ["ETA"] = 0,
                                             ["ETA_locked"] = true,
-                                            ["y"] = 516674.61614072,
-                                            ["x"] = -197864.01882596,
+                                            ["y"] = 516240.61614072,
+                                            ["x"] = -197659.23757596,
                                             ["formation_template"] = "",
                                             ["airdromeId"] = 21,
                                             ["speed_locked"] = true,
                                         }, -- end of [1]
+                                        [2] = 
+                                        {
+                                            ["alt"] = 2000,
+                                            ["action"] = "Turning Point",
+                                            ["alt_type"] = "BARO",
+                                            ["speed"] = 138.88888888889,
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["type"] = "Turning Point",
+                                            ["ETA"] = 85.280305922713,
+                                            ["ETA_locked"] = false,
+                                            ["y"] = 514763.31208346,
+                                            ["x"] = -185907.24015232,
+                                            ["name"] = "Ingress",
+                                            ["formation_template"] = "",
+                                            ["speed_locked"] = true,
+                                        }, -- end of [2]
+                                        [3] = 
+                                        {
+                                            ["alt"] = 2000,
+                                            ["action"] = "Turning Point",
+                                            ["alt_type"] = "BARO",
+                                            ["speed"] = 138.88888888889,
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                        [1] = 
+                                                        {
+                                                            ["enabled"] = true,
+                                                            ["auto"] = false,
+                                                            ["id"] = "AttackGroup",
+                                                            ["number"] = 1,
+                                                            ["params"] = 
+                                                            {
+                                                                ["altitudeEnabled"] = false,
+                                                                ["groupId"] = 4,
+                                                                ["attackQtyLimit"] = false,
+                                                                ["attackQty"] = 1,
+                                                                ["expend"] = "Auto",
+                                                                ["altitude"] = 2000,
+                                                                ["directionEnabled"] = false,
+                                                                ["groupAttack"] = false,
+                                                                ["weaponType"] = 9663676414,
+                                                                ["direction"] = 0,
+                                                            }, -- end of ["params"]
+                                                        }, -- end of [1]
+                                                    }, -- end of ["tasks"]
+                                                }, -- end of ["params"]
+                                            }, -- end of ["task"]
+                                            ["type"] = "Turning Point",
+                                            ["ETA"] = 178.86669722733,
+                                            ["ETA_locked"] = false,
+                                            ["y"] = 502726.92304539,
+                                            ["x"] = -181000.48970161,
+                                            ["name"] = "IP",
+                                            ["formation_template"] = "",
+                                            ["speed_locked"] = true,
+                                        }, -- end of [3]
                                     }, -- end of ["points"]
                                 }, -- end of ["route"]
-                                ["groupId"] = 5,
+                                ["groupId"] = 7,
                                 ["hidden"] = false,
                                 ["units"] = 
                                 {
                                     [1] = 
                                     {
                                         ["alt"] = 21,
+                                        ["hardpoint_racks"] = true,
                                         ["alt_type"] = "BARO",
-                                        ["livery_id"] = "default",
-                                        ["skill"] = "Client",
-                                        ["parking"] = 28,
+                                        ["livery_id"] = "18th agrs splinter",
+                                        ["skill"] = "High",
+                                        ["parking"] = "21",
                                         ["speed"] = 138.88888888889,
                                         ["AddPropAircraft"] = 
                                         {
-                                            ["LaserCode100"] = 6,
-                                            ["HelmetMountedDevice"] = 1,
-                                            ["LAU3ROF"] = 0,
-                                            ["LaserCode10"] = 8,
-                                            ["LaserCode1"] = 8,
                                         }, -- end of ["AddPropAircraft"]
                                         ["type"] = "F-16C_50",
-                                        ["Radio"] = 
-                                        {
-                                            [1] = 
-                                            {
-                                                ["modulations"] = 
-                                                {
-                                                    [1] = 0,
-                                                    [2] = 0,
-                                                    [3] = 0,
-                                                    [4] = 0,
-                                                    [5] = 0,
-                                                    [6] = 0,
-                                                    [7] = 0,
-                                                    [8] = 0,
-                                                    [9] = 0,
-                                                    [10] = 0,
-                                                    [11] = 0,
-                                                    [12] = 0,
-                                                    [13] = 0,
-                                                    [14] = 0,
-                                                    [15] = 0,
-                                                    [16] = 0,
-                                                    [17] = 0,
-                                                    [18] = 0,
-                                                    [19] = 0,
-                                                    [20] = 0,
-                                                }, -- end of ["modulations"]
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 305,
-                                                    [2] = 264,
-                                                    [3] = 265,
-                                                    [4] = 256,
-                                                    [5] = 254,
-                                                    [6] = 250,
-                                                    [7] = 270,
-                                                    [8] = 257,
-                                                    [9] = 255,
-                                                    [10] = 262,
-                                                    [11] = 259,
-                                                    [12] = 268,
-                                                    [13] = 269,
-                                                    [14] = 260,
-                                                    [15] = 263,
-                                                    [16] = 261,
-                                                    [17] = 267,
-                                                    [18] = 251,
-                                                    [19] = 253,
-                                                    [20] = 266,
-                                                }, -- end of ["channels"]
-                                            }, -- end of [1]
-                                            [2] = 
-                                            {
-                                                ["modulations"] = 
-                                                {
-                                                    [1] = 0,
-                                                    [2] = 0,
-                                                    [3] = 0,
-                                                    [4] = 0,
-                                                    [5] = 0,
-                                                    [6] = 0,
-                                                    [7] = 0,
-                                                    [8] = 0,
-                                                    [9] = 0,
-                                                    [10] = 0,
-                                                    [11] = 0,
-                                                    [12] = 0,
-                                                    [13] = 0,
-                                                    [14] = 0,
-                                                    [15] = 0,
-                                                    [16] = 0,
-                                                    [17] = 0,
-                                                    [18] = 0,
-                                                    [19] = 0,
-                                                    [20] = 0,
-                                                }, -- end of ["modulations"]
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 127,
-                                                    [2] = 135,
-                                                    [3] = 136,
-                                                    [4] = 127,
-                                                    [5] = 125,
-                                                    [6] = 121,
-                                                    [7] = 141,
-                                                    [8] = 128,
-                                                    [9] = 126,
-                                                    [10] = 133,
-                                                    [11] = 130,
-                                                    [12] = 139,
-                                                    [13] = 140,
-                                                    [14] = 131,
-                                                    [15] = 134,
-                                                    [16] = 132,
-                                                    [17] = 138,
-                                                    [18] = 122,
-                                                    [19] = 124,
-                                                    [20] = 137,
-                                                }, -- end of ["channels"]
-                                            }, -- end of [2]
-                                        }, -- end of ["Radio"]
-                                        ["unitId"] = 25,
-                                        ["psi"] = 0,
-                                        ["parking_id"] = "02",
-                                        ["x"] = -197864.01882596,
-                                        ["name"] = "Fire-1-1",
+                                        ["unitId"] = 30,
+                                        ["psi"] = 0.12505069817454,
+                                        ["parking_id"] = "10",
+                                        ["x"] = -197659.23757596,
+                                        ["name"] = "Aerial-2-1",
                                         ["payload"] = 
                                         {
                                             ["pylons"] = 
                                             {
+                                                [1] = 
+                                                {
+                                                    ["CLSID"] = "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}",
+                                                }, -- end of [1]
+                                                [2] = 
+                                                {
+                                                    ["CLSID"] = "{5CE2FF2A-645A-4197-B48D-8720AC69394F}",
+                                                }, -- end of [2]
+                                                [3] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [3]
+                                                [4] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [4]
+                                                [5] = 
+                                                {
+                                                    ["CLSID"] = "ALQ_184_Long",
+                                                }, -- end of [5]
+                                                [6] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [6]
+                                                [7] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [7]
+                                                [8] = 
+                                                {
+                                                    ["CLSID"] = "{5CE2FF2A-645A-4197-B48D-8720AC69394F}",
+                                                }, -- end of [8]
+                                                [9] = 
+                                                {
+                                                    ["CLSID"] = "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}",
+                                                }, -- end of [9]
+                                                [10] = 
+                                                {
+                                                    ["CLSID"] = "{AN_ASQ_213}",
+                                                }, -- end of [10]
+                                                [11] = 
+                                                {
+                                                    ["CLSID"] = "{A111396E-D3E8-4b9c-8AC9-2432489304D5}",
+                                                }, -- end of [11]
                                             }, -- end of ["pylons"]
                                             ["fuel"] = 3249,
                                             ["flare"] = 60,
@@ -1011,144 +1924,82 @@ mission =
                                             ["chaff"] = 60,
                                             ["gun"] = 100,
                                         }, -- end of ["payload"]
-                                        ["y"] = 516674.61614072,
-                                        ["heading"] = 0,
+                                        ["y"] = 516240.61614072,
+                                        ["heading"] = -0.12505069817454,
                                         ["callsign"] = 
                                         {
-                                            [1] = 4,
+                                            [1] = 8,
                                             [2] = 1,
                                             [3] = 1,
-                                            ["name"] = "Colt11",
+                                            ["name"] = "Pontiac11",
                                         }, -- end of ["callsign"]
-                                        ["onboard_num"] = "011",
+                                        ["onboard_num"] = "016",
                                     }, -- end of [1]
                                     [2] = 
                                     {
                                         ["alt"] = 21,
                                         ["alt_type"] = "BARO",
-                                        ["livery_id"] = "default",
-                                        ["skill"] = "Client",
-                                        ["parking"] = 29,
+                                        ["livery_id"] = "18th agrs splinter",
+                                        ["skill"] = "High",
+                                        ["parking"] = "22",
                                         ["speed"] = 138.88888888889,
                                         ["AddPropAircraft"] = 
                                         {
-                                            ["LaserCode100"] = 6,
-                                            ["LaserCode1"] = 8,
-                                            ["HelmetMountedDevice"] = 1,
-                                            ["LaserCode10"] = 8,
-                                            ["LAU3ROF"] = 0,
                                         }, -- end of ["AddPropAircraft"]
                                         ["type"] = "F-16C_50",
-                                        ["Radio"] = 
-                                        {
-                                            [1] = 
-                                            {
-                                                ["modulations"] = 
-                                                {
-                                                    [1] = 0,
-                                                    [2] = 0,
-                                                    [3] = 0,
-                                                    [4] = 0,
-                                                    [5] = 0,
-                                                    [6] = 0,
-                                                    [7] = 0,
-                                                    [8] = 0,
-                                                    [9] = 0,
-                                                    [10] = 0,
-                                                    [11] = 0,
-                                                    [12] = 0,
-                                                    [13] = 0,
-                                                    [14] = 0,
-                                                    [15] = 0,
-                                                    [16] = 0,
-                                                    [17] = 0,
-                                                    [18] = 0,
-                                                    [19] = 0,
-                                                    [20] = 0,
-                                                }, -- end of ["modulations"]
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 305,
-                                                    [2] = 264,
-                                                    [3] = 265,
-                                                    [4] = 256,
-                                                    [5] = 254,
-                                                    [6] = 250,
-                                                    [7] = 270,
-                                                    [8] = 257,
-                                                    [9] = 255,
-                                                    [10] = 262,
-                                                    [11] = 259,
-                                                    [12] = 268,
-                                                    [13] = 269,
-                                                    [14] = 260,
-                                                    [15] = 263,
-                                                    [16] = 261,
-                                                    [17] = 267,
-                                                    [18] = 251,
-                                                    [19] = 253,
-                                                    [20] = 266,
-                                                }, -- end of ["channels"]
-                                            }, -- end of [1]
-                                            [2] = 
-                                            {
-                                                ["modulations"] = 
-                                                {
-                                                    [1] = 0,
-                                                    [2] = 0,
-                                                    [3] = 0,
-                                                    [4] = 0,
-                                                    [5] = 0,
-                                                    [6] = 0,
-                                                    [7] = 0,
-                                                    [8] = 0,
-                                                    [9] = 0,
-                                                    [10] = 0,
-                                                    [11] = 0,
-                                                    [12] = 0,
-                                                    [13] = 0,
-                                                    [14] = 0,
-                                                    [15] = 0,
-                                                    [16] = 0,
-                                                    [17] = 0,
-                                                    [18] = 0,
-                                                    [19] = 0,
-                                                    [20] = 0,
-                                                }, -- end of ["modulations"]
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 127,
-                                                    [2] = 135,
-                                                    [3] = 136,
-                                                    [4] = 127,
-                                                    [5] = 125,
-                                                    [6] = 121,
-                                                    [7] = 141,
-                                                    [8] = 128,
-                                                    [9] = 126,
-                                                    [10] = 133,
-                                                    [11] = 130,
-                                                    [12] = 139,
-                                                    [13] = 140,
-                                                    [14] = 131,
-                                                    [15] = 134,
-                                                    [16] = 132,
-                                                    [17] = 138,
-                                                    [18] = 122,
-                                                    [19] = 124,
-                                                    [20] = 137,
-                                                }, -- end of ["channels"]
-                                            }, -- end of [2]
-                                        }, -- end of ["Radio"]
-                                        ["unitId"] = 26,
-                                        ["psi"] = 0,
-                                        ["parking_id"] = "01",
-                                        ["x"] = -197889.87820096,
-                                        ["name"] = "Fire-1-2",
+                                        ["unitId"] = 31,
+                                        ["psi"] = 0.12505069817454,
+                                        ["parking_id"] = "09",
+                                        ["x"] = -197684.61257596,
+                                        ["name"] = "Aerial-2-2",
                                         ["payload"] = 
                                         {
                                             ["pylons"] = 
                                             {
+                                                [1] = 
+                                                {
+                                                    ["CLSID"] = "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}",
+                                                }, -- end of [1]
+                                                [2] = 
+                                                {
+                                                    ["CLSID"] = "{5CE2FF2A-645A-4197-B48D-8720AC69394F}",
+                                                }, -- end of [2]
+                                                [3] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [3]
+                                                [4] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [4]
+                                                [5] = 
+                                                {
+                                                    ["CLSID"] = "ALQ_184_Long",
+                                                }, -- end of [5]
+                                                [6] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [6]
+                                                [7] = 
+                                                {
+                                                    ["CLSID"] = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}",
+                                                }, -- end of [7]
+                                                [8] = 
+                                                {
+                                                    ["CLSID"] = "{5CE2FF2A-645A-4197-B48D-8720AC69394F}",
+                                                }, -- end of [8]
+                                                [9] = 
+                                                {
+                                                    ["CLSID"] = "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}",
+                                                }, -- end of [9]
+                                                [10] = 
+                                                {
+                                                    ["CLSID"] = "{AN_ASQ_213}",
+                                                }, -- end of [10]
+                                                [11] = 
+                                                {
+                                                    ["CLSID"] = "{A111396E-D3E8-4b9c-8AC9-2432489304D5}",
+                                                }, -- end of [11]
                                             }, -- end of ["pylons"]
                                             ["fuel"] = 3249,
                                             ["flare"] = 60,
@@ -1156,30 +2007,45 @@ mission =
                                             ["chaff"] = 60,
                                             ["gun"] = 100,
                                         }, -- end of ["payload"]
-                                        ["y"] = 516728.77239072,
-                                        ["heading"] = 0,
+                                        ["y"] = 516294.83489072,
+                                        ["heading"] = -0.12505069817454,
                                         ["callsign"] = 
                                         {
-                                            [1] = 4,
+                                            [1] = 8,
                                             [2] = 1,
                                             [3] = 2,
-                                            ["name"] = "Colt12",
+                                            ["name"] = "Pontiac12",
                                         }, -- end of ["callsign"]
-                                        ["onboard_num"] = "012",
+                                        ["onboard_num"] = "017",
                                     }, -- end of [2]
                                 }, -- end of ["units"]
-                                ["y"] = 516674.61614072,
-                                ["x"] = -197864.01882596,
-                                ["name"] = "Fire-1",
+                                ["y"] = 516240.61614072,
+                                ["x"] = -197659.23757596,
+                                ["name"] = "Aerial-2",
                                 ["communication"] = true,
                                 ["start_time"] = 0,
-                                ["frequency"] = 305,
-                            }, -- end of [2]
+                                ["frequency"] = 315,
+                            }, -- end of [4]
                         }, -- end of ["group"]
                     }, -- end of ["plane"]
                 }, -- end of [1]
             }, -- end of ["country"]
         }, -- end of ["blue"]
+        ["neutrals"] = 
+        {
+            ["bullseye"] = 
+            {
+                ["y"] = 0,
+                ["x"] = 0,
+            }, -- end of ["bullseye"]
+            ["nav_points"] = 
+            {
+            }, -- end of ["nav_points"]
+            ["name"] = "neutrals",
+            ["country"] = 
+            {
+            }, -- end of ["country"]
+        }, -- end of ["neutrals"]
         ["red"] = 
         {
             ["bullseye"] = 
@@ -1236,10 +2102,10 @@ mission =
                                                     {
                                                         [1] = 
                                                         {
-                                                            ["number"] = 1,
+                                                            ["enabled"] = true,
                                                             ["auto"] = false,
                                                             ["id"] = "WrappedAction",
-                                                            ["enabled"] = true,
+                                                            ["number"] = 1,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -1255,10 +2121,10 @@ mission =
                                                         }, -- end of [1]
                                                         [2] = 
                                                         {
-                                                            ["number"] = 2,
+                                                            ["enabled"] = true,
                                                             ["auto"] = false,
                                                             ["id"] = "WrappedAction",
-                                                            ["enabled"] = true,
+                                                            ["number"] = 2,
                                                             ["params"] = 
                                                             {
                                                                 ["action"] = 
@@ -1490,14 +2356,18 @@ mission =
                                     [18] = 
                                     {
                                         ["skill"] = "High",
+                                        ["AddPropVehicle"] = 
+                                        {
+                                            ["Shield"] = false,
+                                        }, -- end of ["AddPropVehicle"]
                                         ["coldAtStart"] = false,
                                         ["type"] = "flak18",
                                         ["unitId"] = 22,
-                                        ["y"] = 490775.55535701,
-                                        ["x"] = -183793.78046351,
+                                        ["y"] = 490776.32287557,
+                                        ["x"] = -183793.02259224,
                                         ["name"] = "Ground-2-18",
                                         ["heading"] = 5.9341194567807,
-                                        ["playerCanDrive"] = true,
+                                        ["playerCanDrive"] = false,
                                     }, -- end of [18]
                                     [19] = 
                                     {
@@ -1541,7 +2411,7 @@ mission =
     ["trigrules"] = 
     {
     }, -- end of ["trigrules"]
-    ["currentKey"] = 516,
+    ["currentKey"] = 784,
     ["failures"] = 
     {
     }, -- end of ["failures"]
