@@ -1,38 +1,29 @@
 name: Create Archive
-on: 
+on:
   push:
-#     tags:
-#       - '*'
-    branches:
-      - main
+     tags:
+       - '*'
 
 jobs:
-  build:    
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      mission1: test.miz
     steps:
-      - name: checkout main
-        uses: actions/checkout@main      
-      # - name: action-zip              
-      #   uses: montudor/action-zip@v1.0.0        
-      #   with:
-      #     # See montudor/action-zip README.md for more info
-      #     args: zip -qq -r test.miz .
-      - name: zip release
+      - name: Checkout main
+        uses: actions/checkout@main
+      #### test.miz ####
+      - name: Create zip
         uses: thedoctor0/zip-release@0.7.0
         with:
           type: "zip"
-          filename: "test.miz"
-          directory: "tests/test.miz"
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+          filename: "$mission1"
+          directory: "tests/$mission1"
+      - name: Add to release
+        uses: ncipollo/release-action@v1.12.0
         with:
-          name: test mission
-          path: tests/test.miz/test.miz
-#       - name: Upload Release
-#         uses: ncipollo/release-action@v1.12.0        
-#         with:
-#           artifacts: "tests/test.miz/test.miz"
-#           removeArtifacts: "true"
-#           allowUpdates: "true"
+          artifacts: "tests/$mission1/$mission1"
+          removeArtifacts: "true"
+          allowUpdates: "true"
