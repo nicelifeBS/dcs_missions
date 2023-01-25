@@ -1,10 +1,10 @@
 name: Create Archive
 on: 
   push:
-    tags:
-      - '*'
-   # branches:
-   #   - main
+#     tags:
+#       - '*'
+    branches:
+      - main
 
 jobs:
   build:    
@@ -25,9 +25,14 @@ jobs:
           type: "zip"
           filename: "test.miz"
           directory: "tests/test.miz"
-      - name: Upload Release
-        uses: ncipollo/release-action@v1.12.0        
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
         with:
-          artifacts: "tests/test.miz/test.miz"
-          removeArtifacts: "true"
-          allowUpdates: "true"
+          name: test mission
+          path: tests/test.miz/test.miz
+#       - name: Upload Release
+#         uses: ncipollo/release-action@v1.12.0        
+#         with:
+#           artifacts: "tests/test.miz/test.miz"
+#           removeArtifacts: "true"
+#           allowUpdates: "true"
