@@ -19,11 +19,11 @@ jobs:
         uses: thedoctor0/zip-release@0.7.0
         with:
           type: "zip"
-          filename: "$mission1"
-          directory: "tests/$mission1"
+          filename: "${{ env.mission1 }}"
+          directory: "tests/${{ env.mission1 }}"
       - name: Add to release
         uses: ncipollo/release-action@v1.12.0
         with:
-          artifacts: "tests/$mission1/$mission1"
+          artifacts: "tests/${{ env.mission1 }}/${{ env.mission1 }}"
           removeArtifacts: "true"
           allowUpdates: "true"
