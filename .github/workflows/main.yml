@@ -29,7 +29,7 @@ jobs:
           removeArtifacts: "true"
           allowUpdates: "true"
       #### Caucasus Conflict.miz ####
-      - name: Create zip
+      - name: Create zip mission 2
         uses: thedoctor0/zip-release@0.7.0
         with:
           type: "zip"
