@@ -11,7 +11,7 @@ jobs:
       contents: write
     env:
       mission1: test.miz
-      mission2: Cauasus Conflict.miz
+      mission2: Cauasus_conflict.miz
     steps:
       - name: Checkout main
         uses: actions/checkout@main
