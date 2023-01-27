@@ -1,0 +1,14 @@
+dictionary = 
+{
+    ["DictKey_ActionText_6"] = "Sukhumi captured",
+    ["DictKey_ActionText_7"] = "CAPTURED BY RED",
+    ["DictKey_descriptionText_1"] = "RED Coalition trying to inrease control over Sukhumi. They send SAM convoy to deploy airdefence forces in the Sukhumi-Babushara airport. Our main goal is to stop them. Once it will be reached we can land and rearm in Sukhomi and focus on destroying main base at Gudauta.\
+Senaki-Kolhi TCN 31X",
+    ["DictKey_descriptionBlueTask_3"] = "Stom SAM convoy untill it reach Sukhumi airport.\
+Destroy RED Main base at Gudauta",
+    ["DictKey_descriptionNeutralsTask_4"] = "",
+    ["DictKey_sortie_5"] = "",
+    ["DictKey_ActionText_8"] = "",
+    ["DictKey_ActionText_9"] = "Congrats!",
+    ["DictKey_descriptionRedTask_2"] = "",
+} -- end of dictionary
