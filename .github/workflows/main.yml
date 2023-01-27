@@ -26,7 +26,6 @@ jobs:
         uses: ncipollo/release-action@v1.12.0
         with:
           artifacts: "tests/${{ env.mission1 }}/${{ env.mission1 }}"
-          removeArtifacts: "true"
           allowUpdates: "true"
       #### Caucasus Conflict.miz ####
       - name: Create zip
@@ -39,6 +38,4 @@ jobs:
         uses: ncipollo/release-action@v1.12.0
         with:
           artifacts: "tests/${{ env.mission2 }}/${{ env.mission2 }}"
-          removeArtifacts: "true"
           allowUpdates: "true"
-
