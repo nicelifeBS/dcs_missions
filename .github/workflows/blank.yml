@@ -40,7 +40,7 @@ jobs:
                   $items = Get-ChildItem
 
                   $zipname = $path.name
-                  $zippath = "${{ output_folder }}" + $zipname
+                  $zippath = "${{ env.output_folder }}" + $zipname
                   Compress-Archive -Path $items -DestinationPath $zippath
               }
       - name: Add to release
