@@ -49,6 +49,5 @@ jobs:
         with:
           artifacts: "*.miz"
           allowUpdates: "true"
-          commit: true
           generateReleaseNotes: true
           makeLatest: true
