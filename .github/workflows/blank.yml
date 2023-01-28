@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       root_folder: "tests/"
+      output_folder: "output/"
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -28,10 +29,22 @@ jobs:
       - name: Extract folders
         shell: pwsh
         run: |
-          Get-ChildItem -Path "${{ env.root_folder }}" -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object Name
+          $subfolders = Get-ChildItem -Path "${{ env.root_folder }}" -Directory -Force -ErrorAction SilentlyContinue
+              ForEach ($path in $subfolders) 
+              {
+                  Set-Location $path.FullName
+                  $fullpath = $path.FullName
+                  $pathName = $path.BaseName
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+                  #Get all items 
+                  $items = Get-ChildItem
+
+                  $zipname = $path.name
+                  $zippath = "${{ output_folder }}" + $zipname
+                  Compress-Archive -Path $items -DestinationPath $zippath
+              }
+      - name: Add to release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "output/*"
+          allowUpdates: "true"
