@@ -36,12 +36,12 @@ jobs:
                   # Set-Location $path.FullName
                   $fullpath = $path.FullName
                   $pathName = $path.BaseName
-
                   #Get all items 
                   $items = Get-ChildItem -Path $fullpath
 
                   $zipname = $path.name
                   $zippath = $zipname
+                  Write-Host $zippath
                   Compress-Archive -Path $items -DestinationPath $zippath
               }
       - name: Add to release
