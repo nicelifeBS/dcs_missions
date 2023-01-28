@@ -34,7 +34,6 @@ jobs:
                   # Set-Location $path.FullName
                   $fullpath = $path.FullName
                   $pathName = $path.BaseName
-
                   #Get all items 
                   $items = Get-ChildItem -Path $fullpath
 
