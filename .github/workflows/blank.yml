@@ -6,7 +6,6 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
     tags:
       - 'v*'
 
@@ -45,7 +44,10 @@ jobs:
                   Compress-Archive -Path $items -DestinationPath $zippath
               }
       - name: Add to release
-        uses: actions/upload-artifact@v3
+        uses: ncipollo/release-action@v1.12.0
         with:
-          name: missions
-          path: "*.miz"
+          artifacts: "*.miz"
+          allowUpdates: "true"
+          commit: true
+          generateReleaseNotes: true
+          makeLatest: true
