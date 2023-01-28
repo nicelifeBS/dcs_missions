@@ -39,6 +39,7 @@ jobs:
 
                   $zipname = $path.name
                   $zippath = $zipname
+                  Write-Host $zippath
                   Compress-Archive -Path $items -DestinationPath $zippath
               }
       - name: Add to release
